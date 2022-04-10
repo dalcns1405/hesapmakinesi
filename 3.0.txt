@@ -7,6 +7,11 @@ public class Main {
         System.out.println("toplam: " + result);
         return result;
     }
+    static int divided (int a, int b){
+        int result =a/b;
+        System.out.println("bölüm: "+result);
+        return result;
+    }
 
 
     public static void main(String[] args) {
@@ -14,13 +19,7 @@ public class Main {
         int select;
 
         String menu = "1- Toplama İşlemi\n"
-                + "2- Bölme İşlemi\n"
-                + "3- Çarpma İşlemi\n"
-                + "4- Çıkarma işlemi\n"
-                + "5- Üslü Sayı Hesaplama\n"
-                + "6- Faktoriyel Hesaplama\n"
-                + "7- Mod Alma\n"
-                + "8- Dikdörtgen Alan ve Çevre Hesabı\n"
+		+ "2- Bölme İşlemi\n"
                 + "0- Çıkış Yap";
 
         System.out.println(menu);
@@ -43,6 +42,16 @@ public class Main {
                 case 1:
                     sum(a,b);
                     break;
+		case 2:
+		    if(b==0)
+		    {
+		        throw new Exception("Bir sayı sıfıra bölünemez!");
+		    }
+		    else
+		    {
+			divided(a,b);
+                    	break;
+		    }
 
             }
 
